@@ -10,7 +10,7 @@ From a research we know,
     
     
     In india latitude ranges from 6 degree north to 30 degree north and value of cos(latitude*pi/180) is almost equal to one, and hence we can use above realtion and say that, 
-    1 degree change in latitude and longitude can cause upto 111km change in land near india(approximately). And therefore, for 1m will will have change of 10^-5 degree(approx).
+    1 degree change in latitude and longitude can cause upto 111km change in land near india(approximately). And therefore, for 1m will have change of 10^-5 degree(approx).
     
     So for 2 km radius change in angle will be approximately 0.018 degree both in latitude and longitude
     So we can say, maximum permissible value for new latitudes and longitudes is +=0.02.
