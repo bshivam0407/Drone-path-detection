@@ -1,6 +1,6 @@
 # Drone-path-detection
 
-We say say that every point in our map can be defined as a pair of latitude and longitude. So using this information we are mapping those latitudes and longitudes into a 2 Dimensional matrix. 
+We say that every point in our map can be defined as a pair of latitude and longitude. So using this information we are mapping those latitudes and longitudes into a 2 Dimensional matrix. 
 
 From a research we know,
 
@@ -15,7 +15,7 @@ From a research we know,
     So for 2 km radius change in angle will be approximately 0.018 degree both in latitude and longitude
     So we can say, maximum permissible value for new latitudes and longitudes is +=0.02.
     
-Now if we consider each point in a map as 1m x 1m block which is a part of 2D matrix of 4001x40001,
+Now if we consider each point in a map as 1m x 1m block which is a part of 2D matrix of 4001x4001,
 in which point(2000,2000) will represent latitude and longitude of our delivery station.
 
     we can find the coordinates in our matrix from the provided longitude and latitude by the given formula
