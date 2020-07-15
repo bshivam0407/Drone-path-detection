@@ -71,26 +71,6 @@ int main()
     int dest_x=(destlat-srclat)*100000+2000;
     int dest_y=(destlon-srclon)*100000+2000;
 
-    /*(2*pi/360) * radius_earth = 111 km / degree
-    for 1m will will have change of 10^-5 degree(approx)
-    So for 2 km radius change in angle will be approximately 0.1 degree both in latitude and longitude
-    So we can say, maximum permissible value for new latitudes and longitudes is +=0.02.
-
-    Now if we consider each point in a map as 1m x 1m block which is a part of 2D matrix of 4001x40001,
-    in which point(2000,2000) will represent latitude and longitude of our delivery station
-
-
-    we can find the coordinates in our matrix from the provided longitude and latitude by the given formulas
-    ch
-    x=(new_latitude-old_latitude)x10^5+2000
-    y=(new_longitude-old_longitude)x10^5+2000
-
-
-
-    We will get array of invalid points(Points where our drone cannot fly due to height etc).
-    This Array will consist of all the locations which is invalid for drone i.e. drone can not fly over there.
-
-    */
     vector<location> invalidLocations;
 
     int n;// Number of invalid Locations
@@ -103,11 +83,7 @@ int main()
         invalidPoint.latitude=invalidLatitude;
         invalidPoint.longitude=invalidLongitude;
         invalidLocations.push_back(invalidPoint);
-        // We will be converting this points to x & y coordinate and will change the value of those
-        // x and y coordinates to -1 stating that this point cannot come in the path.
-        //x=(new_latitude-old_latitude)x10^5+2000
-        //y=(new_longitude-old_longitude)x10^5+2000
-        //using above formula we get the coordinates in the matrix.
+        
         if(abs(invalidLatitude-srclat)>0.02 || abs(invalidLongitude-srclon)>0.02) //maximum permissible change is 0.02degrees
             continue;
         int x_coordinate=(invalidLatitude-srclat)*100000+2000;
