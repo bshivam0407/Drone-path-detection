@@ -38,7 +38,7 @@ Now BFS (Breadth First Search) is performed from source to destination keeping i
     1.) Insert the source node into the queue, and mark that node as visited.
     2.) Run a loop until the queue is empty and pop one node at each loop.
     3.) Check for all 8 possible directions of node and if it is possible to go there.
-    4.) If possible insert that node withh its parent in the que.
+    4.) If possible insert that node with its parent in the queue.
     5.) Repeat process 2-4 until destination is reached.
     6.) Print the path with the help of parent information stored in the node.
     
